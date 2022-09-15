@@ -125,7 +125,8 @@ namespace GeekTrust
         }
         static void Main(string[] args)
         {
-            string[] lines = File.ReadAllLines(@"D:\.net\csharp-starter-kit\GeekTrust\sample_input\input1.txt");
+            string filePath = args[0];
+            string[] lines = File.ReadAllLines(filePath);
             
             foreach(string line in lines){
                 printAnswer(line.Split(' '));
